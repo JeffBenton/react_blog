@@ -1,6 +1,9 @@
 import _ from 'lodash';
 import { FETCH_POSTS, FETCH_POST, DELETE_POST } from '../actions';
 
+// Alters the application state based on the action that is received
+// For example, deleting a post from the blog is not reflected in the
+// application state until we update the state to exclude the deleted post
 export default function(state = {}, action) {
     switch (action.type) {
         case DELETE_POST:
